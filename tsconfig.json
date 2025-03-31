@@ -8,6 +8,27 @@
     },
     {
       "path": "./apps/sample-api"
+    },
+    {
+      "path": "./libs/core/web"
+    },
+    {
+      "path": "./libs/sample-lib/web"
+    },
+    {
+      "path": "./libs/core/backend"
+    },
+    {
+      "path": "./libs/sample-lib/backend"
+    },
+    {
+      "path": "./libs/core/common"
+    },
+    {
+      "path": "./libs/sample-lib/common"
+    },
+    {
+      "path": "./apps/sample-web"
     }
   ]
 }

@@ -1,0 +1,8 @@
+{
+  "name": "@tmk-template/sample-web",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "sourceRoot": "apps/sample-web/src"
+  }
+}

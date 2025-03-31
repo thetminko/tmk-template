@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "private": true,
   "nx": {
-    "name": "sample-api",
     "targets": {
       "build": {
         "executor": "nx:run-commands",
@@ -28,15 +27,15 @@
           "build"
         ],
         "options": {
-          "buildTarget": "sample-api:build",
+          "buildTarget": "@tmk-template/sample-api:build",
           "runBuildTargetDependencies": false
         },
         "configurations": {
           "development": {
-            "buildTarget": "sample-api:build:development"
+            "buildTarget": "@tmk-template/sample-api:build:development"
           },
           "production": {
-            "buildTarget": "sample-api:build:production"
+            "buildTarget": "@tmk-template/sample-api:build:production"
           }
         }
       },
@@ -44,12 +43,6 @@
         "options": {
           "passWithNoTests": true
         }
-      },
-      "docker-build": {
-        "dependsOn": [
-          "build"
-        ],
-        "command": "docker build -f apps/sample-api/Dockerfile . -t sample-api"
       }
     }
   }

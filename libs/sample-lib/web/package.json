@@ -1,0 +1,17 @@
+{
+  "name": "@sample-lib/web",
+  "version": "0.0.1",
+  "main": "./src/index.tsx",
+  "types": "./src/index.tsx",
+  "exports": {
+    ".": {
+      "types": "./src/index.tsx",
+      "import": "./src/index.tsx",
+      "default": "./src/index.tsx"
+    },
+    "./package.json": "./package.json"
+  },
+  "nx": {
+    "sourceRoot": "libs/sample-lib/src"
+  }
+}
