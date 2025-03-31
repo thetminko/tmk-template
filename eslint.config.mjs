@@ -4,7 +4,6 @@ import globals from 'globals';
 import sonar from 'eslint-plugin-sonarjs';
 import security from 'eslint-plugin-security';
 import eslintPluginReact from 'eslint-plugin-react';
-import eslintPluginReactHooks from 'eslint-plugin-react-hooks';
 
 export default [
   ...nx.configs['flat/base'],
@@ -14,10 +13,9 @@ export default [
   sonar.configs.recommended,
   security.configs.recommended,
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.tsx'],
     ...eslintPluginReact.configs.recommended,
     ...eslintPluginReact.configs['jsx-runtime'],
-    ...eslintPluginReactHooks.configs.recommended,
     languageOptions: {
       globals: {
         ...globals.serviceworker,
