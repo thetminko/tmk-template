@@ -11,10 +11,10 @@
   },
   "include": [
     "jest.config.ts",
-    "src/**/*.test.ts",
-    "src/**/*.spec.ts",
+    "src/**/*Test.ts",
+    "src/**/*Spec.ts",
     "src/**/*.d.ts"
-  ],
+, "src/app/AppController.spec.ts", "src/app/AppService.spec.ts"  ],
   "references": [
     {
       "path": "./tsconfig.app.json"

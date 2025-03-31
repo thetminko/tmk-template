@@ -20,7 +20,25 @@
         "options": {
           "fix": true
         }
+      },
+      "prisma": {
+        "command": "prisma",
+        "options": {
+          "cwd": "libs/sample-lib/backend"
+        }
+      },
+      "migrate": {
+        "command": "prisma migrate dev",
+        "options": {
+          "cwd": "libs/sample-lib/backend"
+        }
+      },
+    "generate-types": {
+      "command": "prisma generate",
+      "options": {
+        "cwd": "libs/sample-lib/backend"
       }
+    }
     },
     "tags": ["scope:app-lib", "app:sample-lib", "type:backend"]
   }

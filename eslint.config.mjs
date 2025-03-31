@@ -15,16 +15,15 @@ export default [
   security.configs.recommended,
   {
     files: ['**/*.{ts,tsx}'],
-    ...eslintPluginReact.configs.flat.recommended,
+    ...eslintPluginReact.configs.recommended,
     ...eslintPluginReact.configs['jsx-runtime'],
-    ...eslintPluginReactHooks.configs.flat.recommended,
+    ...eslintPluginReactHooks.configs.recommended,
     languageOptions: {
-      ...eslintPluginReact.configs.flat.recommended.languageOptions,
       globals: {
         ...globals.serviceworker,
-        ...globals.browser,
-      },
-    },
+        ...globals.browser
+      }
+    }
   },
   {
     ignores: ['**/dist', '**/vite.config.*.timestamp*', '**/vitest.config.*.timestamp*']

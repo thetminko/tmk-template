@@ -1,1 +1,1 @@
-export * from './lib/backend.module';
+export * from './app';
