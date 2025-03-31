@@ -1,15 +1,13 @@
 import nx from '@nx/eslint-plugin';
+import eslintConfigPrettier from 'eslint-plugin-prettier/recommended';
 
 export default [
   ...nx.configs['flat/base'],
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
+  eslintConfigPrettier,
   {
-    ignores: [
-      '**/dist',
-      '**/vite.config.*.timestamp*',
-      '**/vitest.config.*.timestamp*',
-    ],
+    ignores: ['**/dist', '**/vite.config.*.timestamp*', '**/vitest.config.*.timestamp*']
   },
   {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'],
@@ -22,49 +20,40 @@ export default [
           depConstraints: [
             {
               sourceTag: 'scope:core',
-              onlyDependOnLibsWithTags: [],
+              onlyDependOnLibsWithTags: []
             },
             {
               sourceTag: 'scope:app-lib',
-              onlyDependOnLibsWithTags: ['scope:core'],
+              onlyDependOnLibsWithTags: ['scope:core']
             },
             {
               sourceTag: 'scope:app',
-              onlyDependOnLibsWithTags: ['scope:core', 'scope:app-lib'],
+              onlyDependOnLibsWithTags: ['scope:core', 'scope:app-lib']
             },
             {
               sourceTag: 'type:common',
-              onlyDependOnLibsWithTags: ['type:common'],
+              onlyDependOnLibsWithTags: ['type:common']
             },
             {
               sourceTag: 'type:backend',
-              onlyDependOnLibsWithTags: ['type:common', 'type:backend'],
+              onlyDependOnLibsWithTags: ['type:common', 'type:backend']
             },
             {
               sourceTag: 'type:web',
-              onlyDependOnLibsWithTags: ['type:common', 'type:web'],
+              onlyDependOnLibsWithTags: ['type:common', 'type:web']
             },
             {
               sourceTag: 'app:sample-app',
               onlyDependOnLibsWithTags: ['app:sample-app']
             }
-          ],
-        },
-      ],
-    },
+          ]
+        }
+      ]
+    }
   },
   {
-    files: [
-      '**/*.ts',
-      '**/*.tsx',
-      '**/*.cts',
-      '**/*.mts',
-      '**/*.js',
-      '**/*.jsx',
-      '**/*.cjs',
-      '**/*.mjs',
-    ],
+    files: ['**/*.ts', '**/*.tsx', '**/*.cts', '**/*.mts', '**/*.js', '**/*.jsx', '**/*.cjs', '**/*.mjs'],
     // Override or add rules here
-    rules: {},
-  },
+    rules: {}
+  }
 ];
