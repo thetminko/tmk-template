@@ -12,6 +12,15 @@
     "./package.json": "./package.json"
   },
   "nx": {
-    "sourceRoot": "libs/core/src"
+    "sourceRoot": "libs/core/src",
+    "targets": {
+      "lint:fix": {
+        "executor": "@nx/eslint:lint",
+        "options": {
+          "fix": true
+        }
+      }
+    },
+    "tags": ["scope:core", "type:web"]
   }
 }

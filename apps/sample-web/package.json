@@ -3,6 +3,15 @@
   "version": "0.0.1",
   "private": true,
   "nx": {
-    "sourceRoot": "apps/sample-web/src"
+    "sourceRoot": "apps/sample-web/src",
+    "targets": {
+      "lint:fix": {
+        "executor": "@nx/eslint:lint",
+        "options": {
+          "fix": true
+        }
+      }
+    },
+    "tags": ["scope:app", "app:sample-app", "type:web"]
   }
 }

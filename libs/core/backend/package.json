@@ -12,5 +12,16 @@
     },
     "./package.json": "./package.json"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "nx": {
+    "targets": {
+      "lint:fix": {
+        "executor": "@nx/eslint:lint",
+        "options": {
+          "fix": true
+        }
+      }
+    },
+    "tags": ["scope:core", "type:backend"]
+  }
 }
