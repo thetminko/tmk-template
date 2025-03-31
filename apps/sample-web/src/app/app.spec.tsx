@@ -19,9 +19,6 @@ describe('App', () => {
         <App />
       </BrowserRouter>
     );
-    expect(
-      getAllByText(new RegExp('Welcome @tmk-template/sample-web', 'gi'))
-        .length > 0
-    ).toBeTruthy();
+    expect(getAllByText(new RegExp('Welcome @tmk-template/sample-web', 'gi')).length > 0).toBeTruthy();
   });
 });

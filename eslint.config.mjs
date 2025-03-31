@@ -1,11 +1,13 @@
 import nx from '@nx/eslint-plugin';
 import eslintConfigPrettier from 'eslint-plugin-prettier/recommended';
+import sonar from 'eslint-plugin-sonarjs';
 
 export default [
   ...nx.configs['flat/base'],
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
   eslintConfigPrettier,
+  sonar.configs.recommended,
   {
     ignores: ['**/dist', '**/vite.config.*.timestamp*', '**/vitest.config.*.timestamp*']
   },
@@ -44,7 +46,7 @@ export default [
             },
             {
               sourceTag: 'app:sample-app',
-              onlyDependOnLibsWithTags: ['app:sample-app']
+              onlyDependOnLibsWithTags: ['app:sample-app', 'scope:core', 'scope:app-lib']
             }
           ]
         }
