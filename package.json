@@ -86,7 +86,6 @@
   "workspaces": [
     "apps/*",
     "libs/core/*",
-    "libs/sample-lib/*",
-    "libs/test-lib/*"
+    "libs/sample-lib/*"
   ]
 }
